@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Users, Zap, Globe, Clock, Code, Cpu, Shield, Paintbrush, PenTool, TrendingUp, Mic, Smartphone } from "lucide-react";
-import ThreeBackground from "@/components/ui/ThreeBackground";
+import dynamic from "next/dynamic";
+const ThreeBackground = dynamic(() => import("@/components/ui/ThreeBackground"), { ssr: false });
 import TiltCard from "@/components/ui/TiltCard";
 
 // Animation Variants

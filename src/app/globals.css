@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --color-violet-glow: #8b5cf6; /* violet-500 */
-  --color-sky-glow: #0ea5e9;    /* sky-500 */
+  --color-violet-glow: #8b5cf6;
+  --color-sky-glow: #0ea5e9;
   --color-glass: rgba(255, 255, 255, 0.05);
   --color-glass-border: rgba(255, 255, 255, 0.1);
 }
@@ -15,14 +15,21 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Utility for glassmorphism */
+/* Glassmorphism Utility */
 .glass {
   background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Vision Page Selection Glow */
+.selection-glow::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
 }
